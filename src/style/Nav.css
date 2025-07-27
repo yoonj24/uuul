@@ -1,0 +1,51 @@
+/* 공통 nav 스타일 */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 로고 스타일 */
+.nav-logo {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+/* 메뉴 항목 그룹 */
+.nav-menu {
+  display: flex;
+  gap: 64px; /* 약간 넓은 간격 */
+}
+
+/* 각 메뉴 항목 */
+.nav-item {
+  font-size: 18px;
+  font-weight: 400;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #555;
+}
+
+/* 선택된 메뉴 */
+.nav-item.active {
+  color: #000;
+}

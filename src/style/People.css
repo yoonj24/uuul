@@ -1,0 +1,447 @@
+/* People.css */
+
+.people-container {
+  height: 100vh;
+  position: relative;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.people-section {
+  height: 100vh;
+  padding-top: 80px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.people-container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* People 2: 창립자들 섹션 */
+.first-founder {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+}
+
+.first-founder-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.first-founder-text {
+  padding-top: 20px;
+}
+
+.founder-role {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.founder-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.founder-description {
+  color: #374151;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.second-founder-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.second-founder {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  opacity: 0;
+  animation: fadeInRight 0.8s ease-out 0.4s forwards;
+}
+
+.second-founder-text {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.second-founder-role {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.second-founder-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.second-founder-description {
+  color: #374151;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.second-founder-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.third-founder-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 60px;
+}
+
+.third-founder {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out 0.6s forwards;
+}
+
+.third-founder-text {
+  padding-top: 20px;
+}
+
+/* People 3: 팀 멤버들 5명 섹션 */
+.people-section-3 {
+  height: 100vh;
+  padding-top: 80px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.team-grid {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70vh;
+  width: 90%;
+}
+
+.team-member {
+  position: absolute;
+  text-align: center;
+}
+
+.team-member:nth-child(1) {
+  top: 30%;
+  left: 0%;
+  
+}
+
+.team-member:nth-child(2) {
+  top: 0%;
+  left: 22.5%;
+}
+
+.team-member:nth-child(3) {
+  top: 50%;
+  left: 45%;
+}
+
+.team-member:nth-child(4) {
+  top: 20%;
+  left: 67.5%;
+}
+
+.team-member:nth-child(5) {
+  top: 40%;
+  left: 90%;
+}
+
+.team-image {
+  width: 12vw;
+  height: 12vw;
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 15px auto;
+}
+
+.team-role {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #374151;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .team-grid {
+    height: 60vh;
+    width: 95%;
+  }
+  
+  .team-image {
+    width: 18vw;
+    height: 18vw;
+    min-width: 90px;
+    min-height: 90px;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  .team-role {
+    font-size: 12px;
+  }
+  
+  .team-name {
+    font-size: 14px;
+  }
+  
+  /* 모바일에서는 더 간격을 조정 */
+  .team-member:nth-child(1) {
+    top: 6%;
+    left: 15%;
+  }
+  
+  .team-member:nth-child(2) {
+    top: 48%;
+    left: 8%;
+  }
+  
+  .team-member:nth-child(3) {
+    top: 2%;
+    left: 48%;
+  }
+  
+  .team-member:nth-child(4) {
+    top: 53%;
+    left: 60%;
+  }
+  
+  .team-member:nth-child(5) {
+    top: 22%;
+    left: 78%;
+  }
+}
+
+/* People 4: 8명 갤러리 섹션 */
+.people-section-4 {
+  height: 100vh;
+  padding-top: 80px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.gallery-8 {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60vh;
+  width: 90%;
+}
+
+.gallery-item {
+  position: absolute;
+}
+
+.gallery-item:nth-child(1) {
+  top: 0%;
+  left: 6%;
+}
+
+.gallery-item:nth-child(2) {
+  top: 55%;
+  left: 0%;
+}
+
+.gallery-item:nth-child(3) {
+  top: 25%;
+  left: 35%;
+}
+
+.gallery-item:nth-child(4) {
+  top: -10%;
+  left: 58%;
+}
+
+.gallery-item:nth-child(5) {
+  top: 70%;
+  left: 23%;
+}
+
+.gallery-item:nth-child(6) {
+  top: 60%;
+  left: 55%;
+}
+
+.gallery-item:nth-child(7) {
+  top: 15%;
+  left: 88%;
+}
+
+.gallery-item:nth-child(8) {
+  top: 70%;
+  left: 80%;
+}
+
+.gallery-image {
+  width: 12vw;
+  height: 12vw;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .gallery-8 {
+    height: 50vh;
+    width: 95%;
+  }
+  
+  .gallery-image {
+    width: 20vw;
+    height: 20vw;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  /* 모바일에서는 더 간격을 조정 */
+  .gallery-item:nth-child(1) {
+    top: 8%;
+    left: 5%;
+  }
+  
+  .gallery-item:nth-child(2) {
+    top: 50%;
+    left: 0%;
+  }
+  
+  .gallery-item:nth-child(3) {
+    top: 20%;
+    left: 35%;
+  }
+  
+  .gallery-item:nth-child(4) {
+    top: 5%;
+    left: 65%;
+  }
+  
+  .gallery-item:nth-child(5) {
+    top: 65%;
+    left: 25%;
+  }
+  
+  .gallery-item:nth-child(6) {
+    top: 35%;
+    left: 60%;
+  }
+  
+  .gallery-item:nth-child(7) {
+    top: 15%;
+    left: 85%;
+  }
+  
+  .gallery-item:nth-child(8) {
+    top: 75%;
+    left: 70%;
+  }
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gallery-overlay-role {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* 애니메이션 */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
