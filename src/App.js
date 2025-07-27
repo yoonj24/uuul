@@ -1,34 +1,54 @@
-import React, { useState } from 'react';
+// App.js
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import People from './components/People';
-import './App.css';
+import Works from './components/Works';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+import './reset.css';
+import styles from './App.module.css';
 
-  const navigateTo = (page) => {
-    setCurrentPage(page);
-  };
+function LogoGrid() {
+  const navigate = useNavigate();
 
   return (
-    <div className="App">
-      {currentPage === 'home' && (
-        <div>
-          <h1>Home Page</h1>
-          <button onClick={() => navigateTo('people')}>Go to People</button>
+    <div className={styles.box}>
+      <div className={styles.logoBox}>
+        {/* 1번 로고 → /people 이동 */}
+        <div className={styles.logo} onClick={() => navigate('/people')}>
+          <div className={styles.link}></div>
         </div>
-      )}
-      
-      {currentPage === 'people' && (
-        <People onNavigate={navigateTo} />
-      )}
-      
-      {currentPage === 'works' && (
-        <div>
-          <h1>Works Page</h1>
-          <button onClick={() => navigateTo('home')}>Go to Home</button>
+
+        {/* 2번 로고 (동작 없음) */}
+        <div className={styles.logo}>
+          <div className={styles.link}></div>
         </div>
-      )}
+
+        {/* 3번 로고 (동작 없음) */}
+        <div className={styles.logo}>
+          <div className={styles.link}></div>
+        </div>
+
+        {/* 4번 로고 → /works 이동 */}
+        <div className={styles.logo} onClick={() => navigate('/works')}>
+          <div className={styles.link}></div>
+        </div>
+      </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <div className={styles.wraper}>
+          <Routes>
+            <Route path="/" element={<LogoGrid />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/works" element={<Works />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
