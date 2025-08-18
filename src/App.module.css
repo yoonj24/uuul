@@ -1,0 +1,123 @@
+/* .wraper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/temp-group-pic.jpg);
+    background-size: cover;
+    animation: darkenBackground 1.5s ease 0.5s forwards;
+} */
+.wraper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* 확대한 배경이 튀어나가지 않게 */
+}
+
+.wraper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(icons/temp-group-pic.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0);
+  z-index: -1;
+  animation: darkenBackground 0.8s ease 0.5s forwards;
+  animation-delay: 1s;
+}
+@keyframes darkenBackground {
+  0% {
+    filter: grayscale(0) brightness(1);
+    
+  }
+  100% {
+    filter: grayscale(0.5) brightness(0.5);
+  }
+}
+
+.box{
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeInZoom 1s ease forwards;
+    animation-delay: 1.3s;
+    transition: transform 0.8s ease, opacity 0.3s ease, background-image 0.2s ease;
+}
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.logoBox{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.logo .link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    transition: transform 0.8s ease, opacity 0.3s ease, background-image 0.2s ease;
+    /* background-color: red; */
+}
+
+.logo .link:hover{
+    transform: translate(-50%, -50%) scale(1.2);
+    transform-origin: center center;
+    opacity: 1;
+}
+
+.logo:nth-child(1) .link {
+    background-image: url(icons/logo1_white.png);
+
+}
+.logo:nth-child(2) .link {
+    background-image: url(icons/logo2_white.png);
+
+}
+.logo:nth-child(3) .link {
+    background-image: url(icons/logo3_white.png);
+}
+.logo:nth-child(4) .link {
+    background-image: url(icons/logo4_white.png);
+}
+
+.logo:nth-child(1) .link:hover {
+    background-image: url(icons/logo1_color.png);
+}
+.logo:nth-child(2) .link:hover {
+    background-image: url(icons/logo2_color.png);
+}
+.logo:nth-child(3) .link:hover {
+    background-image: url(icons/logo3_color.png);
+}
+.logo:nth-child(4) .link:hover {
+    background-image: url(icons/logo4_color.png);
+}

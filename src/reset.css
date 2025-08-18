@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* Noto Sans KR */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
+/* body { font-family: 'Noto Sans KR', sans-serif; } */
+
+/* Reset */
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,nav,section,article,header,footer,main,aside,dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
+body,input,select,textarea,button,img,fieldset {border:none;}
+ol, ul, li {list-style:none}s
+table{width:100%;border-spacing:0;border-collapse:collapse;}
+button, input {-webkit-border-radius:0;border-radius:0;border:0}
+button {background-color:transparent;cursor: pointer;}
+label,img,input,select,textarea,button,a {vertical-align:middle;}
+iframe {overflow:hidden;margin:0;border:0;padding:0;vertical-align:top}
+textarea {-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:transparent;border:0;word-break:keep-all;word-wrap:break-word}
+p, li{word-break: keep-all;}
+/* text */
+body, button, input, select, table, textarea {font-size:12px;line-height:1.4;color:#202020;font-family:-apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif}
+h1, h2, h3, h4, h5, h6 {font-size:inherit;font-weight: normal;}
+address,cite,code,em,i{font-style:normal;font-weight:normal;}
+a {color:inherit;text-decoration:none}
+a:hover {text-decoration:underline}
+
+/* Normalize */
+select { appearance:none;}
+select::-ms-expand { display:none;}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance:none;}
+/* input[type="number"]{ -moz-appearance:textfield;} */
+input[type="number"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="date"], 
+textarea { -webkit-appearance:none; -moz-appearance:none; appearance:none; border-radius:0; outline:0;}
+textarea { resize: none;}
+
+/* Basic Style */
+/* Only for mobile web */
+/* html { font-size: 10px;}
+body { overflow-x:hidden; font-size: 1rem;}
+body.hidden { position: fixed; overflow-y:hidden;  touch-action: none;} */
+.clear {clear:both;}
+.clear:after { content:""; display:block; clear:both;}
+caption > div,
+legend,
+.hide {overflow: hidden; display:block; position:absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+.skip { position: absolute; left: 0; right: 0; top:-100%; transition: all .5s; line-height: 5rem; background: #000; color:#fff; text-align: center; z-index: 100;}
+.skip:focus { top: 0; }
