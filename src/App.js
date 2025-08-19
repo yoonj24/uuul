@@ -1,5 +1,5 @@
 // App.js
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import People from './components/People';
 import Works from './components/Works';
 
@@ -36,6 +36,53 @@ function LogoGrid() {
   );
 }
 
+// onNavigate 함수를 만드는 컴포넌트
+function PeopleWrapper() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigate = (page) => {
+    if (page === 'home') {
+      navigate('/');
+    } else if (page === 'works') {
+      navigate('/works');
+    } else if (page === 'people') {
+      navigate('/people');
+    }
+  };
+
+  const getCurrentPage = () => {
+    if (location.pathname === '/people') return 'people';
+    if (location.pathname === '/works') return 'works';
+    return 'home';
+  };
+
+  return <People onNavigate={handleNavigate} currentPage={getCurrentPage()} />;
+}
+
+function WorksWrapper() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigate = (page) => {
+    if (page === 'home') {
+      navigate('/');
+    } else if (page === 'works') {
+      navigate('/works');
+    } else if (page === 'people') {
+      navigate('/people');
+    }
+  };
+
+  const getCurrentPage = () => {
+    if (location.pathname === '/people') return 'people';
+    if (location.pathname === '/works') return 'works';
+    return 'home';
+  };
+
+  return <Works onNavigate={handleNavigate} currentPage={getCurrentPage()} />;
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -43,8 +90,8 @@ function App() {
         <div className={styles.wraper}>
           <Routes>
             <Route path="/" element={<LogoGrid />} />
-            <Route path="/people" element={<People />} />
-            <Route path="/works" element={<Works />} />
+            <Route path="/people" element={<PeopleWrapper />} />
+            <Route path="/works" element={<WorksWrapper />} />
           </Routes>
         </div>
       </div>
