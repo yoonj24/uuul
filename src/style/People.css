@@ -3,7 +3,7 @@
 .people-container {
   height: 100vh;
   position: relative;
-  background-image: var(--bg-image);
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,13 +22,15 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .people-container-inner {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  height: 75vh;
+  position: relative;
 }
 
 /* People 2: 창립자들 섹션 */
@@ -39,13 +41,16 @@
   margin-bottom: 60px;
   opacity: 0;
   animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  max-width: 45%;
 }
 
 .first-founder-image {
   width: 200px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 8px;
   flex-shrink: 0;
 }
 
@@ -73,9 +78,10 @@
 }
 
 .second-founder-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  max-width: 42%;
 }
 
 .second-founder {
@@ -92,14 +98,14 @@
 }
 
 .second-founder-role {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #6b7280;
   margin-bottom: 6px;
 }
 
 .second-founder-name {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -107,21 +113,21 @@
 .second-founder-description {
   color: #374151;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .second-founder-image {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 8px;
   flex-shrink: 0;
 }
 
 .third-founder-container {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 60px;
+  position: absolute;
+  bottom: 5%;
+  left: 32%;
+  max-width: 45%;
 }
 
 .third-founder {
@@ -147,7 +153,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .team-grid {
@@ -160,44 +166,64 @@
 
 .team-member {
   position: absolute;
-  text-align: center;
+  text-align: left;
 }
 
+/* 팀 멤버 배치 - 다양한 크기 */
 .team-member:nth-child(1) {
-  top: 30%;
-  left: 0%;
-  
+  top: 8%;
+  left: 5%;
+}
+
+.team-member:nth-child(1) .team-image {
+  width: 200px;
+  height: 250px;
 }
 
 .team-member:nth-child(2) {
-  top: 0%;
-  left: 22.5%;
+  top: 53%;
+  left: 25%;
+}
+
+.team-member:nth-child(2) .team-image {
+  width: 160px;
+  height: 200px;
 }
 
 .team-member:nth-child(3) {
-  top: 50%;
+  top: 15%;
   left: 45%;
 }
 
+.team-member:nth-child(3) .team-image {
+  width: 190px;
+  height: 230px;
+}
+
 .team-member:nth-child(4) {
-  top: 20%;
-  left: 67.5%;
+  top: 5%;
+  left: 67%;
+}
+
+.team-member:nth-child(4) .team-image {
+  width: 150px;
+  height: 190px;
 }
 
 .team-member:nth-child(5) {
   top: 40%;
-  left: 90%;
+  left: 85%;
+}
+
+.team-member:nth-child(5) .team-image {
+  width: 125px;
+  height: 150px;
 }
 
 .team-image {
-  width: 12vw;
-  height: 12vw;
-  min-width: 140px;
-  min-height: 140px;
-  max-width: 180px;
-  max-height: 180px;
+  width: 160px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
   margin: 0 auto 15px auto;
 }
 
@@ -239,27 +265,27 @@
   
   /* 모바일에서는 더 간격을 조정 */
   .team-member:nth-child(1) {
-    top: 6%;
-    left: 15%;
-  }
-  
-  .team-member:nth-child(2) {
-    top: 48%;
+    top: 15%;
     left: 8%;
   }
   
+  .team-member:nth-child(2) {
+    top: 5%;
+    left: 32%;
+  }
+  
   .team-member:nth-child(3) {
-    top: 2%;
-    left: 48%;
+    top: 45%;
+    left: 25%;
   }
   
   .team-member:nth-child(4) {
-    top: 53%;
-    left: 60%;
+    top: 25%;
+    left: 58%;
   }
   
   .team-member:nth-child(5) {
-    top: 22%;
+    top: 10%;
     left: 78%;
   }
 }
@@ -275,7 +301,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .gallery-8 {
@@ -338,13 +364,44 @@
   max-width: 150px;
   max-height: 150px;
   object-fit: cover;
-  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
+
+  .team-image {
+    width: 120px;
+    height: 150px;
+  }
+  
+  /* 모바일 배치 조정 */
+  .team-member:nth-child(1) {
+    top: 8%;
+    left: 12%;
+  }
+  
+  .team-member:nth-child(2) {
+    top: 8%;
+    left: 62%;
+  }
+  
+  .team-member:nth-child(3) {
+    top: 52%;
+    left: 12%;
+  }
+  
+  .team-member:nth-child(4) {
+    top: 52%;
+    left: 62%;
+  }
+  
+  .team-member:nth-child(5) {
+    top: 30%;
+    left: 37%;
+  }
+
   .gallery-8 {
     height: 50vh;
     width: 95%;

@@ -38,7 +38,7 @@ const People = ({ onNavigate }) => {
             />
             <div className="first-founder-text">
               <h3 className="founder-role">Co-Founder</h3>
-              <h2 className="founder-name">송세은</h2>
+              <h2 className="founder-name">송새론</h2>
               <p className="founder-description">
                 한국예술종합학교 예술전문사 영상과 연출전공<br/>
                 성균관대학교 학사 언어인문학과 / 소프트웨어학과<br/>
