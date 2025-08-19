@@ -71,6 +71,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    cursor: pointer;
 }
 
 .logo .link {
@@ -89,9 +90,9 @@
 }
 
 .logo .link:hover{
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.1);
     transform-origin: center center;
-    opacity: 1;
+    opacity: 0.3;
 }
 
 .logo:nth-child(1) .link {
@@ -120,4 +121,41 @@
 }
 .logo:nth-child(4) .link:hover {
     background-image: url(icons/logo4_color.png);
+}
+
+/* Hover text styles */
+.hoverText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hoverText h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.hoverText p {
+    font-size: 14px;
+    margin: 2px 0;
+    font-weight: 500;
+}
+
+.logo:hover .hoverText {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logo:hover .link {
+    opacity: 0.3;
 }

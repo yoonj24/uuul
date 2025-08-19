@@ -1,0 +1,308 @@
+/* Works.css */
+
+.works-container {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.works-content {
+  padding-top: 100px;
+  position: relative;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+}
+
+.works-columns {
+  display: flex;
+  gap: 15px;
+  padding: 0 30px;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.works-column {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 스크롤바 숨기기 */
+.works-column::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.works-column {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.column-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 120px;
+  min-height: 100%;
+}
+
+.movie-title-block {
+  text-align: left;
+  padding: 25px 0;
+  background-color: white;
+  border: 1px solid #eee;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.movie-title-block h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+  line-height: 1.3;
+}
+
+.movie-title-block p {
+  font-size: 14px;
+  color: #333;
+  margin: 3px 0;
+  font-weight: 500;
+}
+
+.coming-soon-block {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  border: 2px dashed #ddd;
+  margin: 40px 0;
+}
+
+.coming-soon-block h2 {
+  font-size: 24px;
+  color: #999;
+  font-weight: 300;
+}
+
+.movie-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+}
+
+.movie-info {
+  max-width: 300px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.movie-year {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.movie-director {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* 페이지 네비게이션 */
+.page-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 5px 0;
+  background-color: white;
+  border-top: 1px solid #eee;
+  z-index: 100;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  background-color: white;
+  color: #666;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover {
+  border-color: #999;
+  color: #333;
+}
+
+.page-btn.active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .works-content {
+    height: auto;
+    overflow: visible;
+  }
+
+  .works-columns {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .works-column {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .column-content {
+    gap: 10px;
+  }
+
+  .movie-title-block {
+    padding: 15px 0;
+    margin: 10px 0;
+  }
+
+  .movie-title-block h2 {
+    font-size: 14px;
+  }
+
+  .movie-title-block p {
+    font-size: 11px;
+  }
+
+  .movie-image {
+    margin-bottom: 8px;
+  }
+
+  .coming-soon-block {
+    padding: 40px 15px;
+    margin: 30px 0;
+  }
+
+  .coming-soon-block h2 {
+    font-size: 20px;
+  }
+
+  .page-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-content {
+    padding-top: 80px;
+  }
+
+  .works-columns {
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .movie-title-block h2 {
+    font-size: 13px;
+  }
+
+  .movie-title-block p {
+    font-size: 10px;
+  }
+}
+
+/* 페이지 2에서 Coming Soon 스타일 */
+.movie-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #aaa;
+}
+
+/* CSS에 추가 */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+.works-item {
+  display: flex;
+  align-items: flex-start;  /* <-- 위쪽 기준 정렬 */
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.works-media img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.works-info {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.works-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}

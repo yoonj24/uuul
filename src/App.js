@@ -15,21 +15,38 @@ function LogoGrid() {
         {/* 1번 로고 → /people 이동 */}
         <div className={styles.logo} onClick={() => navigate('/people')}>
           <div className={styles.link}></div>
+          <div className={styles.hoverText}>
+            <h2>People</h2>
+          </div>
         </div>
 
         {/* 2번 로고 (동작 없음) */}
         <div className={styles.logo}>
           <div className={styles.link}></div>
+          <div className={styles.hoverText}>
+            <h2>울창</h2>
+            <p>Studio UUUL</p>
+            <p>EST. 2025</p>
+          </div>
         </div>
 
         {/* 3번 로고 (동작 없음) */}
         <div className={styles.logo}>
           <div className={styles.link}></div>
+          <div className={styles.hoverText}>
+            <h2>Contact</h2>
+            <p>010-1234-5678</p>
+            <p>studiouuul@gmail.com</p>
+            <p>147. 304 Someaddress</p>
+          </div>
         </div>
 
         {/* 4번 로고 → /works 이동 */}
         <div className={styles.logo} onClick={() => navigate('/works')}>
           <div className={styles.link}></div>
+          <div className={styles.hoverText}>
+            <h2>Works</h2>
+          </div>
         </div>
       </div>
     </div>

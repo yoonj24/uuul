@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
 import peopleImg from '../icons/people.png';
+import tempGroupPic from '../icons/temp-group-pic.jpg';
 import '../style/People.css';
 
 const People = ({ onNavigate }) => {
@@ -30,22 +31,22 @@ const People = ({ onNavigate }) => {
         <div className="intro-container">
           {/* 사진들 */}
           <div className="intro-photo intro-photo-1">
-            사진
+            <img alt="스튜디오 사진 1" />
           </div>
           <div className="intro-photo intro-photo-2">
-            사진
+            <img alt="스튜디오 사진 2" />
           </div>
           <div className="intro-photo intro-photo-3">
-            사진
+            <img alt="스튜디오 사진 3" />
           </div>
           <div className="intro-photo intro-photo-4">
-            사진
+            <img alt="스튜디오 사진 4" />
           </div>
           <div className="intro-photo intro-photo-5">
-            사진
+            <img alt="스튜디오 사진 5" />
           </div>
           <div className="intro-photo intro-photo-6">
-            사진
+            <img alt="스튜디오 사진 6" />
           </div>
 
           {/* 중앙 텍스트 */}
