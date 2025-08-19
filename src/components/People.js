@@ -30,22 +30,22 @@ const People = ({ onNavigate }) => {
         <div className="intro-container">
           {/* 사진들 */}
           <div className="intro-photo intro-photo-1">
-            <img src={peopleImg} alt="Studio Photo 1" />
+            사진
           </div>
           <div className="intro-photo intro-photo-2">
-            <img src={peopleImg} alt="Studio Photo 2" />
+            사진
           </div>
           <div className="intro-photo intro-photo-3">
-            <img src={peopleImg} alt="Studio Photo 3" />
+            사진
           </div>
           <div className="intro-photo intro-photo-4">
-            <img src={peopleImg} alt="Studio Photo 4" />
+            사진
           </div>
           <div className="intro-photo intro-photo-5">
-            <img src={peopleImg} alt="Studio Photo 5" />
+            사진
           </div>
           <div className="intro-photo intro-photo-6">
-            <img src={peopleImg} alt="Studio Photo 6" />
+            사진
           </div>
 
           {/* 중앙 텍스트 */}
