@@ -25,6 +25,42 @@ const People = ({ onNavigate }) => {
       {/* 네비게이션 바 */}
       <Nav onNavigate={onNavigate} currentPage="people" />
 
+      {/* People 1: 스튜디오 소개 섹션 */}
+      <div className="people-section people-intro-section">
+        <div className="intro-container">
+          {/* 사진들 */}
+          <div className="intro-photo intro-photo-1">
+            <img src={peopleImg} alt="Studio Photo 1" />
+          </div>
+          <div className="intro-photo intro-photo-2">
+            <img src={peopleImg} alt="Studio Photo 2" />
+          </div>
+          <div className="intro-photo intro-photo-3">
+            <img src={peopleImg} alt="Studio Photo 3" />
+          </div>
+          <div className="intro-photo intro-photo-4">
+            <img src={peopleImg} alt="Studio Photo 4" />
+          </div>
+          <div className="intro-photo intro-photo-5">
+            <img src={peopleImg} alt="Studio Photo 5" />
+          </div>
+          <div className="intro-photo intro-photo-6">
+            <img src={peopleImg} alt="Studio Photo 6" />
+          </div>
+
+          {/* 중앙 텍스트 */}
+          <div className="intro-text-box">
+            <h2>스튜디오 울창은</h2>
+            <p>
+              함께 숨 쉬고고 미워하는 예술의 숨입니다<br/>
+              영화에서 시작해 이야기와 잡과 빛나는 창명들을<br/>
+              지마다 다른 길이 모여 하나의 숨결이 되고<br/>
+              아름다움은 여기서 태어나 서로에게 스며듭니다
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* People 2: 창립자들 섹션 */}
       <div className="people-section">
         <div className="people-container-inner">
@@ -33,15 +69,16 @@ const People = ({ onNavigate }) => {
           <div className="first-founder">
             <img 
               src={peopleImg}
-              alt="송세은 Co-Founder"
+              alt="송새론 Co-Founder"
               className="first-founder-image"
             />
             <div className="first-founder-text">
               <h3 className="founder-role">Co-Founder</h3>
               <h2 className="founder-name">송새론</h2>
               <p className="founder-description">
+                사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
                 한국예술종합학교 예술전문사 영상과 연출전공<br/>
-                성균관대학교 학사 언어인문학과 / 소프트웨어학과<br/>
+                성균관대학교 학사 언어영문학과 / 소프트웨어학과<br/>
                 대원외국어고등학교 영어과
               </p>
             </div>
@@ -52,15 +89,16 @@ const People = ({ onNavigate }) => {
             <div className="second-founder">
               <div className="second-founder-text">
                 <h3 className="second-founder-role">Co-Founder</h3>
-                <h2 className="second-founder-name">정원영</h2>
+                <h2 className="second-founder-name">정한영</h2>
                 <p className="second-founder-description">
+                  그림을 그리고, 무언가를 만들고, <br/>영화를 찍습니다.<br/> 생경하고 기묘한 순간을 따라갑니다.<br/><br/>
                   연세대학교 학사 건축학과<br/>
                   서울과학고등학교
                 </p>
               </div>
               <img 
                 src={peopleImg}
-                alt="정원영 Co-Founder"
+                alt="정한영 Co-Founder"
                 className="second-founder-image"
               />
             </div>
@@ -78,7 +116,8 @@ const People = ({ onNavigate }) => {
                 <h3 className="second-founder-role">Co-Founder</h3>
                 <h2 className="second-founder-name">장윤재</h2>
                 <p className="second-founder-description">
-                  서울대학교 학사 경영학과 / 컴퓨터과<br/>
+                  섬세함과 호기심으로 세상을 바라봅니다.<br/>흙과 돌, 바다와 대지를 품고 살아가고 있습니다.<br/><br/>
+                  서울대학교 학사 경영학과 / 건축학과<br/>
                   대원외국어고등학교 영어과
                 </p>
               </div>
