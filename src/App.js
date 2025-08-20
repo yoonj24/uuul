@@ -16,7 +16,9 @@ function LogoGrid() {
         <div className={styles.logo} onClick={() => navigate('/people')}>
           <div className={styles.link}></div>
           <div className={styles.hoverText}>
-            <h2>People</h2>
+            <div className={styles.peopleText}>
+              <h2>People</h2>
+            </div>
           </div>
         </div>
 
@@ -24,9 +26,11 @@ function LogoGrid() {
         <div className={styles.logo}>
           <div className={styles.link}></div>
           <div className={styles.hoverText}>
-            <h2>울창</h2>
-            <p>Studio UUUL</p>
-            <p>EST. 2025</p>
+            <div className={styles.studioText}>
+              <h2>울창</h2>
+              <p>Studio UUUL</p>
+              <p>EST. 2025</p>
+            </div>
           </div>
         </div>
 
@@ -34,10 +38,12 @@ function LogoGrid() {
         <div className={styles.logo}>
           <div className={styles.link}></div>
           <div className={styles.hoverText}>
-            <h2>Contact</h2>
-            <p>010-1234-5678</p>
-            <p>studiouuul@gmail.com</p>
-            <p>147. 304 Someaddress</p>
+            <div className={styles.contactText}>
+              <h2>Contact</h2><br/>
+              <p>010-1234-5678</p>
+              <p>studiouuul@gmail.com</p>
+              <p>147. 304 Someaddress</p>
+            </div>
           </div>
         </div>
 
@@ -45,7 +51,9 @@ function LogoGrid() {
         <div className={styles.logo} onClick={() => navigate('/works')}>
           <div className={styles.link}></div>
           <div className={styles.hoverText}>
-            <h2>Works</h2>
+            <div className={styles.worksText}>
+              <h2>Works</h2>
+            </div>
           </div>
         </div>
       </div>

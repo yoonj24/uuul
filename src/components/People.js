@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
 import peopleImg from '../icons/people.png';
-import tempGroupPic from '../icons/temp-group-pic.jpg';
 import '../style/People.css';
 
 const People = ({ onNavigate }) => {

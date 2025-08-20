@@ -77,10 +77,9 @@
 .logo .link {
     width: 100%;
     height: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0;
+    left: 0;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,9 +89,9 @@
 }
 
 .logo .link:hover{
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
     transform-origin: center center;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .logo:nth-child(1) .link {
@@ -137,17 +136,26 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     z-index: 10;
     pointer-events: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .hoverText h2 {
     font-size: 24px;
     font-weight: bold;
-    margin: 0 0 8px 0;
+    margin-top: 15px;
+    line-height: 1;
 }
 
 .hoverText p {
     font-size: 14px;
-    margin: 2px 0;
+    margin-top: 15px;
+    line-height: 1.2;
     font-weight: 500;
 }
 
@@ -157,5 +165,22 @@
 }
 
 .logo:hover .link {
-    opacity: 0.3;
+    opacity: 0.6;
+}
+
+/* 각 텍스트 그룹별 중앙 정렬 */
+.peopleText {
+    margin-top: 0px;
+}
+
+.studioText {
+    margin-top: 50px;
+}
+
+.contactText {
+    margin-top: -90px;
+}
+
+.worksText {
+    margin-top: -60px;
 }
