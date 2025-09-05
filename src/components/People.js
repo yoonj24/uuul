@@ -33,7 +33,7 @@ const People = ({ onNavigate }) => {
     { name: '정태건', role: 'Designer', photo: tgPhoto },
     { name: '김수민', role: 'Project Coordinator', photo: smPhoto },
     { name: '이동건', role: 'Art Coordinator', photo: dgPhoto },
-    { name: '윤승현', role: 'Developer', photo: shPhoto }
+    { name: '윤승현', role: 'Executive Coordinator', photo: shPhoto }
   ];
 
   const galleryMembers = [
@@ -105,7 +105,7 @@ const People = ({ onNavigate }) => {
               <p className="founder-description">
                 사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
                 한국예술종합학교 예술전문사 영상과 연출전공<br/>
-                성균관대학교 학사 언어영문학과 / 소프트웨어학과<br/>
+                성균관대학교 학사 영어영문학과 / 소프트웨어학과<br/>
                 대원외국어고등학교 영어과
               </p>
             </div>
