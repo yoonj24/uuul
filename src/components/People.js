@@ -2,17 +2,27 @@ import React, { useState } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
 import peopleImg from '../icons/people.png';
+// Founder photos
+import srPhoto from '../icons/sr.jpg';
+import hyPhoto from '../icons/hy.jpg';
+import yjPhoto from '../icons/yj.jpg';
+// Team member photos
+import sbPhoto from '../icons/sb.jpg';
+import tgPhoto from '../icons/tg.jpg';
+import smPhoto from '../icons/sm.jpg';
+import dgPhoto from '../icons/dg.jpg';
+import shPhoto from '../icons/sh.jpg';
 import '../style/People.css';
 
 const People = ({ onNavigate }) => {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   const teamMembers = [
-    { name: '이상빈', role: 'Producer' },
-    { name: '정대건', role: 'Designer' },
-    { name: '김수민', role: 'Project Coordinator' },
-    { name: '이종건', role: 'Art Coordinator' },
-    { name: '윤승현', role: 'Developer' }
+    { name: '이상빈', role: 'Producer', photo: sbPhoto },
+    { name: '정태건', role: 'Designer', photo: tgPhoto },
+    { name: '김수민', role: 'Project Coordinator', photo: smPhoto },
+    { name: '이동건', role: 'Art Coordinator', photo: dgPhoto },
+    { name: '윤승현', role: 'Developer', photo: shPhoto }
   ];
 
   const galleryMembers = Array(8).fill().map((_, i) => ({
@@ -68,7 +78,7 @@ const People = ({ onNavigate }) => {
           {/* 첫 번째 창립자 - 왼쪽 */}
           <div className="first-founder">
             <img 
-              src={peopleImg}
+              src={srPhoto}
               alt="송새론 Co-Founder"
               className="first-founder-image"
             />
@@ -97,7 +107,7 @@ const People = ({ onNavigate }) => {
                 </p>
               </div>
               <img 
-                src={peopleImg}
+                src={hyPhoto}
                 alt="정한영 Co-Founder"
                 className="second-founder-image"
               />
@@ -108,7 +118,7 @@ const People = ({ onNavigate }) => {
           <div className="third-founder-container">
             <div className="third-founder">
               <img 
-                src={peopleImg}
+                src={yjPhoto}
                 alt="장윤재 Co-Founder"
                 className="second-founder-image"
               />
@@ -133,7 +143,7 @@ const People = ({ onNavigate }) => {
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
               <img 
-                src={peopleImg}
+                src={member.photo}
                 alt={`${member.name} ${member.role}`}
                 className="team-image"
               />
