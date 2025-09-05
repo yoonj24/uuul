@@ -12,6 +12,17 @@ import tgPhoto from '../icons/tg.jpg';
 import smPhoto from '../icons/sm.jpg';
 import dgPhoto from '../icons/dg.jpg';
 import shPhoto from '../icons/sh.jpg';
+// Gallery member photos
+import snPhoto from '../icons/sn.jpg';
+import sjPhoto from '../icons/sj.jpg';
+import mgPhoto from '../icons/mg.jpg';
+// Intro photos
+import intro1Photo from '../icons/intro_1.JPG';
+import intro2Photo from '../icons/intro_2.jpeg';
+import intro3Photo from '../icons/intro_3.jpg';
+import intro4Photo from '../icons/intro_4.JPG';
+import intro5Photo from '../icons/intro_5.JPG';
+import intro6Photo from '../icons/intro_6.jpg';
 import '../style/People.css';
 
 const People = ({ onNavigate }) => {
@@ -25,10 +36,16 @@ const People = ({ onNavigate }) => {
     { name: '윤승현', role: 'Developer', photo: shPhoto }
   ];
 
-  const galleryMembers = Array(8).fill().map((_, i) => ({
-    name: `멤버${i + 1}`,
-    role: 'Story Minor'
-  }));
+  const galleryMembers = [
+    { name: '유서나', role: 'Artist', photo: snPhoto },
+    { name: '윤선재', role: 'Producer', photo: sjPhoto },
+    { name: '전민경', role: 'Investment Strategist', photo: mgPhoto },
+    { name: '이하민', role: 'Story Miner', photo: peopleImg },
+    { name: '서한결', role: '', photo: peopleImg },
+    { name: '봄에르덴', role: '', photo: peopleImg },
+    { name: '최연희', role: '', photo: peopleImg },
+    { name: 'coming soon', role: '', photo: peopleImg }
+  ];
 
   return (
     <div className="people-container" style={{ '--bg-image': `url(${peoplePageBg})` }}>
@@ -40,22 +57,22 @@ const People = ({ onNavigate }) => {
         <div className="intro-container">
           {/* 사진들 */}
           <div className="intro-photo intro-photo-1">
-            <img alt="스튜디오 사진 1" />
+            <img src={intro1Photo} alt="intro_1" />
           </div>
           <div className="intro-photo intro-photo-2">
-            <img alt="스튜디오 사진 2" />
+            <img src={intro2Photo} alt="intro_2" />
           </div>
           <div className="intro-photo intro-photo-3">
-            <img alt="스튜디오 사진 3" />
+            <img src={intro3Photo} alt="intro_3" />
           </div>
           <div className="intro-photo intro-photo-4">
-            <img alt="스튜디오 사진 4" />
+            <img src={intro4Photo} alt="intro_4" />
           </div>
           <div className="intro-photo intro-photo-5">
-            <img alt="스튜디오 사진 5" />
+            <img src={intro5Photo} alt="intro_5" />
           </div>
           <div className="intro-photo intro-photo-6">
-            <img alt="스튜디오 사진 6" />
+            <img src={intro6Photo} alt="intro_6" />
           </div>
 
           {/* 중앙 텍스트 */}
@@ -165,7 +182,7 @@ const People = ({ onNavigate }) => {
               onMouseLeave={() => setHoveredMember(null)}
             >
               <img 
-                src={peopleImg}
+                src={member.photo}
                 alt={`${member.name} ${member.role}`}
                 className="gallery-image"
               />

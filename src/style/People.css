@@ -47,6 +47,14 @@
   color: #666;
   font-size: 16px;
   font-weight: 500;
+  overflow: hidden;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .intro-photo-1 {
