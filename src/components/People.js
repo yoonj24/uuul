@@ -105,7 +105,7 @@ const People = ({ onNavigate }) => {
               <p className="founder-description">
                 사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
                 한국예술종합학교 예술전문사 영상과 연출전공<br/>
-                성균관대학교 학사 영어영문학과 / 소프트웨어학과<br/>
+                성균관대학교 영어영문학과 / 소프트웨어학과<br/>
                 대원외국어고등학교 영어과
               </p>
             </div>
@@ -119,7 +119,7 @@ const People = ({ onNavigate }) => {
                 <h2 className="second-founder-name">정한영</h2>
                 <p className="second-founder-description">
                   그림을 그리고, 무언가를 만들고, <br/>영화를 찍습니다.<br/> 생경하고 기묘한 순간을 따라갑니다.<br/><br/>
-                  연세대학교 학사 건축학과<br/>
+                  연세대학교 건축학과<br/>
                   서울과학고등학교
                 </p>
               </div>
@@ -144,7 +144,7 @@ const People = ({ onNavigate }) => {
                 <h2 className="second-founder-name">장윤재</h2>
                 <p className="second-founder-description">
                   섬세함과 호기심으로 세상을 바라봅니다.<br/>흙과 돌, 바다와 대지를 품고 살아가고 있습니다.<br/><br/>
-                  서울대학교 학사 경영학과 / 건축학과<br/>
+                  서울대학교 경영학과 / 건축학과<br/>
                   대원외국어고등학교 영어과
                 </p>
               </div>
