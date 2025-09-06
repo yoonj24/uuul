@@ -2,42 +2,66 @@ import React, { useState, useRef, useEffect } from 'react';
 import Nav from '../items/nav';
 import '../style/Works.css';
 
+// Apple images
+import apple1 from '../icons/apple_1.png';
+import apple2 from '../icons/apple_2.png';
+import apple3 from '../icons/apple_3.png';
+import apple4 from '../icons/apple_4.png';
+import apple5 from '../icons/apple_5.png';
+import apple6 from '../icons/apple_6.png';
+
+// Wood images
+import wood1 from '../icons/wood_1.png';
+import wood2 from '../icons/wood_2.png';
+import wood3 from '../icons/wood_3.png';
+import wood4 from '../icons/wood_4.png';
+import wood5 from '../icons/wood_5.png';
+import wood6 from '../icons/wood_6.png';
+
+// Spring images
+import spring1 from '../icons/spring_1.png';
+import spring2 from '../icons/spring_2.png';
+import spring3 from '../icons/spring_3.png';
+import spring4 from '../icons/spring_4.png';
+import spring5 from '../icons/spring_5.png';
+import spring6 from '../icons/spring_6.png';
+
 const Works = ({ onNavigate }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const columnRefs = useRef([]);
 
   // 이미지 데이터
   const column1Images = [
-    { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=450&fit=crop" }
+    { src: apple1 },
+    { src: apple2 },
+    { src: apple3 },
+    { src: apple4 },
+    { src: apple5 },
+    { src: apple6 }
   ];
 
   const column2Images = [
-    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=450&fit=crop" }
+    { src: wood1 },
+    { src: wood2 },
+    { src: wood3 },
+    { src: wood4 },
+    { src: wood5 },
+    { src: wood6 }
   ];
 
   const column3Images = [
-    { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=450&fit=crop" },
-    { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=450&fit=crop" }
+    { src: spring1 },
+    { src: spring2 },
+    { src: spring3 },
+    { src: spring4 },
+    { src: spring5 },
+    { src: spring6 }
   ];
 
   // 🎰 각 컬럼별 다른 시작점을 가진 양방향 무한 스크롤 컨텐츠 생성
   const createBidirectionalInfiniteContent = (images, titleBlock, columnIndex) => {
     const baseItems = [];
-    const cycleLength = 12; // 한 사이클의 길이를 줄여서 제목이 더 자주 나타나도록
+    const cycleLength = 6; // 사이클 길이를 6으로 설정
     
     // 기본 패턴 생성 (이미지 + 제목 배치)
     for (let i = 0; i < cycleLength; i++) {
@@ -52,14 +76,14 @@ const Works = ({ onNavigate }) => {
       // 컬럼별로 다른 위치에 제목 블록 배치
       let shouldAddTitle = false;
       switch (columnIndex) {
-        case 0: // 컬럼 1: 사이클 시작 부분에 제목 (더 일찍 나타나도록)
-          shouldAddTitle = (i === 0 || i === 6); // 첫 번째와 중간에 제목 배치
+        case 0: // 컬럼 1: 사이클 시작 부분에 제목
+          shouldAddTitle = (i === 0); // 첫 번째에 제목 배치
           break;
         case 1: // 컬럼 2: 사이클 중간에 제목
-          shouldAddTitle = (i === Math.floor(cycleLength / 2));
+          shouldAddTitle = (i === Math.floor(cycleLength / 2)); // 3번째 (인덱스 3)
           break;
         case 2: // 컬럼 3: 사이클 끝 부분에 제목
-          shouldAddTitle = (i === cycleLength - 3);
+          shouldAddTitle = (i === cycleLength - 1); // 마지막 (인덱스 5)
           break;
       }
       
@@ -183,7 +207,7 @@ const Works = ({ onNavigate }) => {
     <div className="movie-title-block">
       <h2>Mars and the First Apple Tree</h2>
       <p>(2025)</p>
-      <p>연출 송세은</p>
+      <p>연출 송새론</p>
     </div>
   );
 
@@ -191,7 +215,7 @@ const Works = ({ onNavigate }) => {
     <div className="movie-title-block">
       <h2>수풀 우거진 곳에서</h2>
       <p>(2025)</p>
-      <p>연출 송세은</p>
+      <p>연출 송새론</p>
     </div>
   );
 
@@ -199,7 +223,7 @@ const Works = ({ onNavigate }) => {
     <div className="movie-title-block">
       <h2>늦봄</h2>
       <p>(2025)</p>
-      <p>연출 송세은</p>
+      <p>연출 송새론</p>
     </div>
   );
 
