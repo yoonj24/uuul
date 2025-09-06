@@ -149,7 +149,9 @@ const People = ({ onNavigate }) => {
               <h3 className="founder-role">Co-Founder</h3>
               <h2 className="founder-name">송새론</h2>
               <p className="founder-description">
-                사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
+                사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!
+              </p>
+              <p className="founder-education">
                 한국예술종합학교 
                 전문사 영화과<br/>
                 성균관대학교 영어영문학과/소프트웨어학과<br/>
@@ -169,7 +171,9 @@ const People = ({ onNavigate }) => {
                 <h3 className="second-founder-role">Co-Founder</h3>
                 <h2 className="second-founder-name">정한영</h2>
                 <p className="second-founder-description">
-                  그림을 그리고, 무언가를 만들고, <br/>영화를 찍습니다.<br/> 생경하고 기묘한 순간을 따라갑니다.<br/><br/>
+                  그림을 그리고, 무언가를 만들고, <br/>영화를 찍습니다.<br/> 생경하고 기묘한 순간을 따라갑니다.
+                </p>
+                <p className="second-founder-education">
                   연세대학교 건축학과<br/>
                   서울과학고등학교
                 </p>
@@ -198,7 +202,9 @@ const People = ({ onNavigate }) => {
                 <h3 className="second-founder-role">Co-Founder</h3>
                 <h2 className="second-founder-name">장윤재</h2>
                 <p className="second-founder-description">
-                  섬세함과 호기심으로 세상을 바라봅니다.<br/>흙과 돌, 바다와 대지를 품고 살아가고 있습니다.<br/><br/>
+                  섬세함과 호기심으로 세상을 바라봅니다.<br/>흙과 돌, 바다와 대지를 품고 살아가고 있습니다.
+                </p>
+                <p className="second-founder-education">
                   서울대학교 경영학과/건축학과<br/>
                   대원외국어고등학교
                 </p>

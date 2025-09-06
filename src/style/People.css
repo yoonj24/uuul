@@ -194,6 +194,13 @@
   font-size: 14px;
 }
 
+.founder-education {
+  color: #374151;
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
 .second-founder-container {
   position: absolute;
   top: 15%;
@@ -237,6 +244,13 @@
   color: #374151;
   line-height: 1.5;
   font-size: 14px;
+}
+
+.second-founder-education {
+  color: #374151;
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: 12px;
 }
 
 .second-founder-image {
