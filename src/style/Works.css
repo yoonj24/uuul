@@ -93,6 +93,11 @@
   visibility: visible;
 }
 
+.movie-title-block .plot-description {
+  font-size: 12px;
+  margin: 20px 0 3px 0;
+}
+
 .coming-soon-block {
   text-align: center;
   padding: 60px 20px;
