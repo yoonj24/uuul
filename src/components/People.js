@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
 import peopleImg from '../icons/people.png';
@@ -28,6 +28,8 @@ import '../style/People.css';
 
 const People = ({ onNavigate }) => {
   const [hoveredMember, setHoveredMember] = useState(null);
+  const [animatedElements, setAnimatedElements] = useState(new Set());
+  const founderRefs = useRef([]);
 
   const teamMembers = [
     { name: '정태건', role: 'Designer', photo: tgPhoto },
@@ -47,6 +49,43 @@ const People = ({ onNavigate }) => {
     { name: '최연희', role: '', photo: emptyProfileImg },
     { name: '서한결', role: '', photo: emptyProfileImg }
   ];
+
+  // Intersection Observer for scroll-triggered animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const elementId = entry.target.id;
+            setAnimatedElements(prev => new Set([...prev, elementId]));
+          } else {
+            // Reset animation when element goes out of view
+            const elementId = entry.target.id;
+            setAnimatedElements(prev => {
+              const newSet = new Set(prev);
+              newSet.delete(elementId);
+              return newSet;
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of element is visible
+        rootMargin: '0px 0px -50px 0px' // Start animation slightly before element is fully visible
+      }
+    );
+
+    // Observe all founder elements
+    founderRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      founderRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className="people-container" style={{ '--bg-image': `url(${peoplePageBg})` }}>
@@ -95,7 +134,11 @@ const People = ({ onNavigate }) => {
         <div className="people-container-inner">
           
           {/* 첫 번째 창립자 - 왼쪽 */}
-          <div className="first-founder">
+          <div 
+            id="founder-1"
+            ref={el => founderRefs.current[0] = el}
+            className={`first-founder ${animatedElements.has('founder-1') ? 'animate' : ''}`}
+          >
             <img 
               src={srPhoto}
               alt="송새론 Co-Founder"
@@ -116,7 +159,11 @@ const People = ({ onNavigate }) => {
 
           {/* 두 번째 창립자 - 오른쪽 */}
           <div className="second-founder-container">
-            <div className="second-founder">
+            <div 
+              id="founder-2"
+              ref={el => founderRefs.current[1] = el}
+              className={`second-founder ${animatedElements.has('founder-2') ? 'animate' : ''}`}
+            >
               <div className="second-founder-text">
                 <h3 className="second-founder-role">Co-Founder</h3>
                 <h2 className="second-founder-name">정한영</h2>
@@ -136,7 +183,11 @@ const People = ({ onNavigate }) => {
 
           {/* 세 번째 창립자 - 왼쪽 (들여쓰기) */}
           <div className="third-founder-container">
-            <div className="third-founder">
+            <div 
+              id="founder-3"
+              ref={el => founderRefs.current[2] = el}
+              className={`third-founder ${animatedElements.has('founder-3') ? 'animate' : ''}`}
+            >
               <img 
                 src={yjPhoto}
                 alt="장윤재 Co-Founder"

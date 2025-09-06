@@ -147,11 +147,17 @@
   gap: 40px;
   margin-bottom: 60px;
   opacity: 0;
-  animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
   position: absolute;
   top: -10%;
   left: 5%;
   max-width: 45%;
+}
+
+.first-founder.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .first-founder-image {
@@ -197,7 +203,13 @@
   align-items: flex-start;
   gap: 30px;
   opacity: 0;
-  animation: fadeInRight 0.8s ease-out 0.4s forwards;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.second-founder.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .second-founder-text {
@@ -244,7 +256,13 @@
   align-items: flex-start;
   gap: 30px;
   opacity: 0;
-  animation: fadeInLeft 0.8s ease-out 0.6s forwards;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.third-founder.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .third-founder-text {
