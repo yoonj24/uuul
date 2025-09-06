@@ -34,7 +34,7 @@ const People = ({ onNavigate }) => {
   const teamMembers = [
     { name: '정태건', role: 'Designer', photo: tgPhoto },
     { name: '이상빈', role: 'Producer', photo: sbPhoto },
-    { name: '김수민', role: 'Project Coordinator', photo: smPhoto },
+    { name: 'Kim Su', role: 'Project Coordinator', photo: smPhoto },
     { name: '이동건', role: 'Art Coordinator', photo: dgPhoto },
     { name: '윤승현', role: 'Executive Coordinator', photo: shPhoto }
   ];
