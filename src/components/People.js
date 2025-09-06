@@ -18,7 +18,7 @@ import sjPhoto from '../icons/sj.jpg';
 import mgPhoto from '../icons/mg.jpg';
 // Intro photos
 import intro1Photo from '../icons/intro_1.JPG';
-import intro2Photo from '../icons/intro_2.jpeg';
+import intro2Photo from '../icons/intro_2.jpg';
 import intro3Photo from '../icons/intro_3.jpg';
 import intro4Photo from '../icons/intro_4.JPG';
 import intro5Photo from '../icons/intro_5.JPG';
@@ -44,7 +44,7 @@ const People = ({ onNavigate }) => {
     { name: '서한결', role: '', photo: peopleImg },
     { name: '봄에르덴', role: '', photo: peopleImg },
     { name: '최연희', role: '', photo: peopleImg },
-    { name: 'coming soon', role: '', photo: peopleImg }
+    { name: '김동건', role: 'Developer', photo: peopleImg }
   ];
 
   return (
@@ -104,7 +104,7 @@ const People = ({ onNavigate }) => {
               <h2 className="founder-name">송새론</h2>
               <p className="founder-description">
                 사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
-                한국예술종합학교 예술전문사 영상과 연출전공<br/>
+                한국예술종합학교 예술전문사 영화과 연출전공<br/>
                 성균관대학교 영어영문학과 / 소프트웨어학과<br/>
                 대원외국어고등학교 영어과
               </p>
