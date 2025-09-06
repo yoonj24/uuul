@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
 import peopleImg from '../icons/people.png';
+import emptyProfileImg from '../icons/empty_profile.jpg';
 // Founder photos
 import srPhoto from '../icons/sr.jpg';
 import hyPhoto from '../icons/hy.jpg';
@@ -29,8 +30,8 @@ const People = ({ onNavigate }) => {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   const teamMembers = [
-    { name: '이상빈', role: 'Producer', photo: sbPhoto },
     { name: '정태건', role: 'Designer', photo: tgPhoto },
+    { name: '이상빈', role: 'Producer', photo: sbPhoto },
     { name: '김수민', role: 'Project Coordinator', photo: smPhoto },
     { name: '이동건', role: 'Art Coordinator', photo: dgPhoto },
     { name: '윤승현', role: 'Executive Coordinator', photo: shPhoto }
@@ -40,11 +41,11 @@ const People = ({ onNavigate }) => {
     { name: '유서나', role: 'Artist', photo: snPhoto },
     { name: '윤선재', role: 'Producer', photo: sjPhoto },
     { name: '전민경', role: 'Investment Strategist', photo: mgPhoto },
-    { name: '이하민', role: 'Story Miner', photo: peopleImg },
-    { name: '서한결', role: '', photo: peopleImg },
-    { name: '봄에르덴', role: '', photo: peopleImg },
-    { name: '최연희', role: '', photo: peopleImg },
-    { name: '김동건', role: 'Developer', photo: peopleImg }
+    { name: '이하민', role: 'Story Miner', photo: emptyProfileImg },
+    { name: '서한결', role: '', photo: emptyProfileImg },
+    { name: '봄에르덴', role: '', photo: emptyProfileImg },
+    { name: '최연희', role: '', photo: emptyProfileImg },
+    { name: '김동건', role: 'Developer', photo: emptyProfileImg }
   ];
 
   return (
@@ -104,9 +105,10 @@ const People = ({ onNavigate }) => {
               <h2 className="founder-name">송새론</h2>
               <p className="founder-description">
                 사랑을 탐구합니다.<br/>다 함께, 유쾌하게, 당돌하게!<br/><br/>
-                한국예술종합학교 예술전문사 영화과 연출전공<br/>
-                성균관대학교 영어영문학과 / 소프트웨어학과<br/>
-                대원외국어고등학교 영어과
+                한국예술종합학교 
+                전문사 영화과<br/>
+                성균관대학교 영어영문학과/소프트웨어학과<br/>
+                대원외국어고등학교
               </p>
             </div>
           </div>
@@ -144,8 +146,8 @@ const People = ({ onNavigate }) => {
                 <h2 className="second-founder-name">장윤재</h2>
                 <p className="second-founder-description">
                   섬세함과 호기심으로 세상을 바라봅니다.<br/>흙과 돌, 바다와 대지를 품고 살아가고 있습니다.<br/><br/>
-                  서울대학교 경영학과 / 건축학과<br/>
-                  대원외국어고등학교 영어과
+                  서울대학교 경영학과/건축학과<br/>
+                  대원외국어고등학교
                 </p>
               </div>
             </div>

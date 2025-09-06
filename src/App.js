@@ -40,8 +40,8 @@ function LogoGrid() {
           <div className={styles.hoverText}>
             <div className={styles.contactText}>
               <h2>Contact</h2><br/>
-              <p>instagram @studio.uuul</p>
-              <p>studiouuul@gmail.com</p>
+              <p>@studio.uuul</p>
+              <p>studio.uuul@gmail.com</p>
               <p>Seoul, Korea</p>
             </div>
           </div>
