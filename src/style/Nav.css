@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'KoPub Dotum', sans-serif;
 }
 
 /* 로고 스타일 */
@@ -34,7 +34,7 @@
 /* 각 메뉴 항목 */
 .nav-item {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: #aaa;
   cursor: pointer;
   transition: color 0.3s;
@@ -66,5 +66,5 @@
 }
 
 .nav-item.active {
-  font-weight: bold;
+  font-weight: 300;
 }

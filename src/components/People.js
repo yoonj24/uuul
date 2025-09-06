@@ -117,8 +117,8 @@ const People = ({ onNavigate }) => {
 
           {/* 중앙 텍스트 */}
           <div className="intro-text-box">
-            <h2>Studio UUUL<br/>
-              스튜디오 울창</h2>
+            <h2>Studio UUUL
+            </h2>
             <p>
               울창은 큰 나무를 지향합니다.<br/>
               단단한 뿌리를 공유하며<br/> 

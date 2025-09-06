@@ -3,20 +3,20 @@ import Nav from '../items/nav';
 import '../style/Works.css';
 
 // Apple images
-import apple1 from '../icons/apple_1.png';
-import apple2 from '../icons/apple_2.png';
-import apple3 from '../icons/apple_3.png';
-import apple4 from '../icons/apple_4.png';
-import apple5 from '../icons/apple_5.png';
-import apple6 from '../icons/apple_6.png';
+import apple2 from '../icons/apple_1.png';
+import apple3 from '../icons/apple_2.png';
+import apple4 from '../icons/apple_3.png';
+import apple5 from '../icons/apple_4.png';
+import apple6 from '../icons/apple_5.png';
+import apple1 from '../icons/apple_6.png';
 
 // Wood images
-import wood1 from '../icons/wood_1.png';
-import wood2 from '../icons/wood_2.png';
-import wood3 from '../icons/wood_3.png';
-import wood4 from '../icons/wood_4.png';
-import wood5 from '../icons/wood_5.png';
-import wood6 from '../icons/wood_6.png';
+import wood5 from '../icons/wood_1.png';
+import wood6 from '../icons/wood_2.png';
+import wood1 from '../icons/wood_3.png';
+import wood2 from '../icons/wood_4.png';
+import wood3 from '../icons/wood_5.png';
+import wood4 from '../icons/wood_6.png';
 
 // Spring images
 import spring1 from '../icons/spring_1.png';
