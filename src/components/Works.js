@@ -202,7 +202,7 @@ const Works = ({ onNavigate }) => {
     return () => clearTimeout(timer);
   }, [currentPage]);
 
-  // 제목 블록들
+  // 제목 블록들 - Updated for deployment
   const titleBlock1 = (
     <div className="movie-title-block">
       <h2>Mars and the First Apple Tree (2025)</h2>
