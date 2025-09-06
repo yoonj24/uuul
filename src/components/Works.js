@@ -205,9 +205,8 @@ const Works = ({ onNavigate }) => {
   // 제목 블록들
   const titleBlock1 = (
     <div className="movie-title-block">
-      <h2>Mars and the First Apple Tree</h2>
-      <p>(2025)</p>
-      <p>각본,연출 | 송새론</p>
+      <h2>Mars and the First Apple Tree (2025)</h2>
+        <p className="credits">각본,연출 | 송새론</p>
       <p className="plot-description">2297년 화성, 테라포밍 실험이 진행 중인 유리 에덴에 의문의 열매가 등장한다.<br/>
         테라포밍 사업을 살려낼 수 있는 절호의 기회,<br/>
         걷잡을 수 없이 커지는 선동 속에서 진실은 점차 사라져만 간다.</p>
@@ -216,9 +215,8 @@ const Works = ({ onNavigate }) => {
 
   const titleBlock2 = (
     <div className="movie-title-block">
-      <h2>수풀 우거진 곳에서</h2>
-      <p>(2025)</p>
-      <p>각본 | 정태건,정한영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연출 | 송새론</p>
+      <h2>수풀 우거진 곳에서 (2025)</h2>
+        <p className="credits">각본 | 정태건,정한영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연출 | 송새론</p>
       <p className="plot-description">사랑에 상식이 있다면 무엇이고 거짓이 있다면 무엇일까.<br/>
         가정교사 새론은 고등학생 태건의 이야기를 통해서 자신의 솔직한 마음을 들여다본다.<br/>
         떨어뜨린 마음 한 방울을 찾아 향한 수풀 우거진 곳에서.</p>
@@ -227,9 +225,8 @@ const Works = ({ onNavigate }) => {
 
   const titleBlock3 = (
     <div className="movie-title-block">
-      <h2>늦봄</h2>
-      <p>(2025)</p>
-      <p>각본 | 장윤재&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연출 | 송새론</p>
+      <h2>늦봄 (2025)</h2>
+        <p className="credits">각본 | 장윤재&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연출 | 송새론</p>
       <p className="plot-description">재윤과의 4주년이 된 날, 소희는 절친한 언니 다솔과 함께 프로포즈를 준비한다. 하지만<br/>
         늦봄 바람에 스친 책장에, 수필집 속 꼭꼭 숨겨두었던 소희의 마음이 터져나오고 만다.</p>
     </div>

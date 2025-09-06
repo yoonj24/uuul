@@ -98,6 +98,10 @@
   margin: 20px 0 3px 0;
 }
 
+.movie-title-block .credits {
+  font-size: 12px;
+}
+
 .coming-soon-block {
   text-align: center;
   padding: 60px 20px;
