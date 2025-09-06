@@ -189,6 +189,14 @@
     margin-top: -90px;
 }
 
+.hoverText .contactText p:nth-child(2) {
+    margin-top: 8px !important; /* Smaller space between @studio.uuul and email */
+}
+
+.hoverText .contactText p:nth-child(3) {
+    margin-top: 25px !important; /* Larger space between email and Seoul, Korea */
+}
+
 .worksText {
     margin-top: -60px;
 }

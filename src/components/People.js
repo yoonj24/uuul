@@ -18,11 +18,11 @@ import snPhoto from '../icons/sn.jpg';
 import sjPhoto from '../icons/sj.jpg';
 import mgPhoto from '../icons/mg.jpg';
 // Intro photos
-import intro1Photo from '../icons/intro_1.JPG';
+import intro1Photo from '../icons/intro_1.jpg';
 import intro2Photo from '../icons/intro_2.jpg';
 import intro3Photo from '../icons/intro_3.jpg';
-import intro4Photo from '../icons/intro_4.JPG';
-import intro5Photo from '../icons/intro_5.JPG';
+import intro4Photo from '../icons/intro_4.jpg';
+import intro5Photo from '../icons/intro_5.jpg';
 import intro6Photo from '../icons/intro_6.jpg';
 import '../style/People.css';
 
@@ -42,10 +42,10 @@ const People = ({ onNavigate }) => {
     { name: '윤선재', role: 'Producer', photo: sjPhoto },
     { name: '전민경', role: 'Investment Strategist', photo: mgPhoto },
     { name: '이하민', role: 'Story Miner', photo: emptyProfileImg },
-    { name: '서한결', role: '', photo: emptyProfileImg },
+    { name: '김동건', role: 'Developer', photo: emptyProfileImg },
     { name: '봄에르덴', role: '', photo: emptyProfileImg },
     { name: '최연희', role: '', photo: emptyProfileImg },
-    { name: '김동건', role: 'Developer', photo: emptyProfileImg }
+    { name: '서한결', role: '', photo: emptyProfileImg }
   ];
 
   return (
@@ -78,10 +78,10 @@ const People = ({ onNavigate }) => {
 
           {/* 중앙 텍스트 */}
           <div className="intro-text-box">
-            <h2>스튜디오 울창(Studio UUUL)은</h2>
+            <h2>스튜디오 울창(Studio UUUL)</h2>
             <p>
-              큰 나무를 지향합니다.<br/>
-              단단한 뿌리를 공유하며 각자만의 미학으로 뻗어나갈 수 있는 예술 공동체,<br/>
+              울창은 큰 나무를 지향합니다.<br/>
+              단단한 뿌리를 공유하며 각자의 미학으로 뻗어나가는 예술 공동체,<br/><br/>
               그 중심에 울창이 있습니다.<br/>
               참고로 재밌습니다.
             </p>

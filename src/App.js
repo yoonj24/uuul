@@ -42,7 +42,7 @@ function LogoGrid() {
               <h2>Contact</h2><br/>
               <p>@studio.uuul</p>
               <p>studio.uuul@gmail.com</p>
-              <p>Seoul, Korea</p>
+              <p>Jamsil-ro 62, Seoul</p>
             </div>
           </div>
         </div>
