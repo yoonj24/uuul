@@ -189,12 +189,22 @@
     margin-top: -90px;
 }
 
-.hoverText .contactText p:nth-child(2) {
-    margin-top: 8px !important; /* Smaller space between @studio.uuul and email */
+/* Contact title positioning */
+.hoverText .contactText h2 {
+    margin-bottom: 25px !important; /* Space between "Contact" and first text */
 }
 
+/* Individual text element margins */
 .hoverText .contactText p:nth-child(3) {
-    margin-top: 25px !important; /* Larger space between email and Seoul, Korea */
+    margin-top: 0px !important; /* Instagram ID - no extra margin */
+}
+
+.hoverText .contactText p:nth-child(4) {
+    margin-top: 5px !important; /* Email address - small gap from Instagram */
+}
+
+.hoverText .contactText p:nth-child(5) {
+    margin-top: 20px !important; /* Address - larger gap from email */
 }
 
 .worksText {
