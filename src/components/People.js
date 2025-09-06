@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Nav from '../items/nav';
 import peoplePageBg from '../icons/people_page_bg.png';
-import peopleImg from '../icons/people.png';
 import emptyProfileImg from '../icons/empty_profile.jpg';
 // Founder photos
 import srPhoto from '../icons/sr.jpg';
